@@ -1,0 +1,22 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src=`/img/coche_${coche.imagen}.jpg`, alt="imagen coche", class="img-fluid")
+            .col-md-7
+                h1 #{coche.titulo}             
+                  
+
+                p
+                    svg.icon.icon-tabler.icon-tabler-coin(xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewbox='0 0 24 24' stroke-width='1.5' stroke='#2adc13' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                        path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                        circle(cx='12' cy='12' r='9')
+                        path(d='M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1')
+                        path(d='M12 6v2m0 8v2')
+                    | #{coche.precio} Euros
+
+              
+
+                p= coche.descripcion
